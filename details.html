@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sacred Triad (Shraddha - Karm - Gyan)</title>
+
+    <!--WEB-ICON-->
+    <link rel="icon" type="images/x-icon" href="images/web-logo.png">
+    <!--WEB-ICON-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; 
+        }
+
+        /* Initial Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Bar with Logo */
+        .header {
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            animation: fadeInUp 1s ease-out;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-image {
+            height: 100px; /* Aap logo ka size yahan se change kar sakte hain */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .academy-name {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            color: #d4af37;
+            font-weight: 400;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 80vh;
+            padding: 0 40px 60px 40px;
+            gap: 20px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .card {
+            flex: 1;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            transition: flex 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            flex: 2;
+            border-color: #d4af37;
+        }
+
+        .card-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            transition: transform 1.2s ease;
+        }
+
+        .card:hover .card-bg {
+            transform: scale(1.1);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+            z-index: 1;
+            transition: background 0.4s;
+        }
+
+        .card:hover::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            pointer-events: none;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            letter-spacing: 8px;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-weight: 400;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .content h1 {
+            transform: translateY(-10px);
+        }
+
+        .content p {
+            font-size: 1rem;
+            color: #efefef;
+            max-width: 320px;
+            line-height: 1.6;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .card:hover .content p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Background Images */
+        .shradha .card-bg { background-image: url(images/five.jpeg); }
+        .karm .card-bg { background-image: url(images/nine.jpeg); }
+        .gyan .card-bg { background-image: url(images/living.jpeg); }
+
+        @media (max-width: 768px) {
+            body { overflow-y: auto; }
+            .header { padding: 20px; justify-content: center; }
+            .main-container { flex-direction: column; height: auto; }
+            .card { height: 450px; flex: none; }
+            .card:hover { flex: none; }
+            .content p { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="header">
+        <div class="logo-container">
+            <img src="images/white-logo.png" class="logo-image">
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="card shradha">
+            <div class="card-bg"></div>
+            <div class="content">
+                <h1>SHRADHA</h1>
+                <p>The foundation of unwavering faith. Deepening your connection with the divine essence within and trusting the journey of the soul.</p>
+            </div>
+        </div>
+
+        <div class="card karm">
+            <div class="card-bg"></div>
+            <div class="content">
+                <h1>KARM</h1>
+                <p>The art of conscious action. Transforming every movement into a sacred offering through selfless dedication and presence.</p>
+            </div>
+        </div>
+
+        <div class="card gyan">
+            <div class="card-bg"></div>
+            <div class="content">
+                <h1>GYAN</h1>
+                <p>The light of supreme knowledge. Dissolving the shadows of ignorance to realize the ultimate truth and inner wisdom.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

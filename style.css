@@ -1,0 +1,1172 @@
+::-webkit-scrollbar{
+	width:20px;
+	width:20px;
+	border:0px solid transparent;
+	border-radius:20px !important;
+}
+::-webkit-scrollbar-track{
+	border-radius:0px;
+	background:transparent;
+}
+::-webkit-scrollbar-thumb{
+	border-radius:10px;
+	background:#590303;
+}
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+/* three colours
+#125423 green
+#cc7e7e light pink
+#590303 dark red
+font-family: "Poppins", sans-serif;
+font-family:Copperplate Gothic Light;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap');
+
+body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+/* Background Video Settings */
+.landing { position: relative; width: 100%; min-height: 100vh; }
+.video-box { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
+.video-box video { width: 100%; height: 100%; object-fit: cover; }
+.video-overlay { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: -1; 
+}
+
+/* Top Bar Styling */
+.top-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1vw 5vw; background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: white; font-size: 0.9vw;
+}
+.top-nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; }
+
+.info-left {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.phone-span {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Icon aur number ke beech gap */
+}
+.phone-span a {
+    margin-left: 0 !important; /* Default margin hatane ke liye */
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.main-logo { width: 18vw; margin-bottom: 2vw; filter: drop-shadow(0 0 10px rgba(255,255,255,0.3)); }
+.est-tag { color: #b58e3e; letter-spacing: 5px; font-weight: 700; }
+.main-title { 
+    font-size: 5vw; color: white; font-family: 'Playfair Display', serif; 
+    font-weight: 900; line-height: 1.1; margin: 1vw 0;
+}
+.gold-text { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+.sub-text { color: #ccc; font-size: 1.5vw; font-family: 'Mukta', sans-serif; }
+
+/* The Glass Form */
+.premium-form-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 3vw;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+    color: white;
+}
+.premium-form-box h4 { font-weight: 800; letter-spacing: 2px; text-align: center; }
+.premium-form-box p { text-align: center; color: #00d2ff; font-size: 0.9vw; margin-bottom: 2vw; }
+
+/* Modern Input Groups */
+.input-group { position: relative; margin-bottom: 25px; width: 100%; }
+.input-group input, .input-group textarea {
+    width: 100%; padding: 10px 0; font-size: 1vw; color: white;
+    background: transparent; border: none; border-bottom: 2px solid #555;
+    outline: none; transition: 0.3s;
+}
+.input-group label {
+    position: absolute; top: 10px; left: 0; color: #999;
+    pointer-events: none; transition: 0.3s;
+}
+.input-group input:focus ~ label, .input-group input:valid ~ label, .input-group textarea:focus ~ label, .input-group .text-area:valid ~ label{
+    top: -15px; font-size: 0.8vw; color: #ffd700 !important;
+}
+.input-group input:focus { border-bottom: 2px solid #ffd700; }
+
+/* Glowing Button */
+.glow-button {
+    width: 100%; padding: 12px; border-radius: 50px; border: none;
+    background: linear-gradient(45deg, #590303, #b58e3e);
+    color: white; font-weight: 700; font-size: 1.1vw;
+    cursor: pointer; transition: 0.4s;
+    box-shadow: 0 10px 20px rgba(89, 3, 3, 0.4);
+}
+.glow-button:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3); }
+
+/* Social Sidebar */
+.social-sidebar { position: fixed; left: 0; top: 30%; z-index: 100; }
+.social-sidebar a {
+    display: flex; width: 45px; height: 45px; color: white;
+    justify-content: center; align-items: center; text-decoration: none;
+    font-size: 1.2rem; transition: 0.3s; margin-bottom: 5px;
+    background: rgba(0,0,0,0.4); backdrop-filter: blur(5px);
+    border-radius: 0 10px 10px 0;
+}
+.social-sidebar a:hover { width: 60px; padding-left: 10px; }
+.social-sidebar .wa { color: #25D366; }
+.social-sidebar .ig { color: #E1306C; }
+
+
+
+/* ===============================
+   TABLET DEVICES (<= 991px)
+================================ */
+@media (max-width: 991px) {
+
+    .top-nav {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .info-left {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .main-logo {
+        width: 30vw;
+    }
+
+    .main-title {
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .sub-text {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .premium-form-box {
+        padding: 40px 30px;
+    }
+
+    .premium-form-box p {
+        font-size: 14px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 14px;
+    }
+
+    .glow-button {
+        font-size: 14px;
+    }
+}
+
+
+/* ===============================
+   MOBILE DEVICES (<= 576px)
+================================ */
+@media (max-width: 576px) {
+
+    .top-nav {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .info-right {
+        display: none; /* Mobile pe clean look */
+    }
+
+    .main-logo {
+        width: 55vw;
+        margin: auto;
+        display: block;
+    }
+
+    .est-tag {
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 9vw;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .sub-text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .premium-form-box {
+        border-radius: 20px;
+        padding: 30px 20px;
+    }
+
+    .premium-form-box h4 {
+        font-size: 16px;
+    }
+
+    .premium-form-box p {
+        font-size: 13px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 13px;
+    }
+
+    .input-group label {
+        font-size: 12px;
+    }
+
+    .glow-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* Social Sidebar mobile adjustment */
+    .social-sidebar {
+        top: auto;
+        bottom: 15%;
+    }
+
+    .social-sidebar a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 576px) {
+
+    /* Form container */
+    .premium-form-box {
+        width: 100%;
+        max-width: 92%;
+        margin: 0 auto;
+        padding: 28px 22px 32px;
+        border-radius: 22px;
+    }
+
+    /* Input group spacing */
+    .input-group {
+        margin-bottom: 28px;
+    }
+
+    /* Inputs & textarea */
+    .input-group input,
+    .input-group textarea {
+        font-size: 15px;
+        padding: 14px 0;
+        line-height: 1.4;
+        border-bottom-width: 1.5px;
+    }
+
+    /* Textarea height fix */
+    .input-group textarea {
+        min-height: 90px;
+        resize: none;
+    }
+
+    /* Floating label (placeholder feel) */
+    .input-group label {
+        font-size: 14px;
+        top: 14px;
+    }
+
+    /* Floating label when active */
+    .input-group input:focus ~ label,
+    .input-group input:valid ~ label,
+    .input-group textarea:focus ~ label,
+    .input-group textarea:valid ~ label {
+        top: -10px;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Submit button */
+    .glow-button {
+        font-size: 15px;
+        padding: 14px;
+        margin-top: 10px;
+        border-radius: 45px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Second Page Starts From Here */
+.second-page {
+    padding: 10vw 8vw;
+    /* Ek premium soft gradient jo depth create karega */
+    background: radial-gradient(circle at top right, #fffcf5 0%, #f7f3f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decoration (Ek halka sa watermark effect) */
+.second-page::before {
+    content: "A";
+    position: absolute;
+    top: -5vw;
+    left: -2vw;
+    font-size: 25vw;
+    font-weight: 900;
+    color: rgba(89, 3, 3, 0.03); /* Bahut halka logo initial */
+    font-family: 'serif';
+    z-index: 0;
+}
+
+.second-page .row1 {
+    position: relative;
+    z-index: 1; /* Content ko upar rakhne ke liye */
+}
+
+/* Typography Enhancements */
+.second-page .col1 .head1 {
+    color: #b58e3e; /* Metallic Gold tone */
+    font-size: 1vw;
+    letter-spacing: 5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.second-page .col1 .head2 {
+    color: #2d2d2d;
+    font-size: 3.8vw;
+    font-family: 'Playfair Display', serif; /* Agar font available ho toh */
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.second-page .col1 .head2 .highlight {
+    color: #590303;
+    display: block; /* Aatreya ko next line pe laane ke liye */
+}
+
+/* Divider line with a gold touch */
+.divider {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, #590303, #b58e3e);
+    margin: 2vw 0;
+    border-radius: 2px;
+}
+
+.description {
+    font-size: 1.15vw;
+    color: #4a4a4a;
+    line-height: 1.8;
+    font-weight: 400;
+    border-left: 3px solid #eee; /* Side line for a classic look */
+    padding-left: 20px;
+}
+
+/* Video Frame: Elegant Glassmorphism */
+.video-wrapper {
+    position: relative;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.08), 
+                -5px -5px 20px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.second-page .row1 .col2 video {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Button: Hover effect upgrade */
+.btn-discover {
+    margin-top: 3vw;
+    padding: 1vw 3vw;
+    background: #590303;
+    color: #fff;
+    border: none;
+    border-radius: 4px; /* Boxy look for elite feel */
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(89, 3, 3, 0.3);
+}
+.btn-discover a{
+    color:#fff;
+    text-decoration:none;
+}
+.btn-discover:hover {
+    background: #2d2d2d;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TABLET VIEW */
+@media (max-width: 991px) {
+
+    .second-page {
+        padding: 12vw 6vw;
+    }
+
+    .second-page .col1 {
+        margin-bottom: 50px;
+    }
+
+    .second-page .col1 .head1 {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .second-page .col1 .head2 {
+        font-size: 6vw;
+        line-height: 1.15;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .divider {
+        margin: 25px 0;
+    }
+
+    .btn-discover {
+        padding: 12px 35px;
+        font-size: 14px;
+    }
+}
+
+
+/* MOBILE VIEW */
+@media (max-width: 576px) {
+
+    /* Section spacing */
+    .second-page {
+        padding: 80px 20px;
+    }
+
+    /* Background watermark adjust */
+    .second-page::before {
+        font-size: 45vw;
+        top: -10vw;
+        left: -5vw;
+    }
+
+    /* Stack content nicely */
+    .second-page .row1 {
+        flex-direction: column;
+    }
+
+    /* Headings */
+    .second-page .col1 .head1 {
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .second-page .col1 .head2 {
+        font-size: 32px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .second-page .col1 .head2 .highlight {
+        display: inline;
+    }
+
+    /* Divider center */
+    .divider {
+        margin: 20px auto;
+    }
+
+    /* Description */
+    .description {
+        font-size: 15px;
+        line-height: 1.75;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+
+    /* Button */
+    .btn-discover {
+        display: block;
+        margin: 35px auto 0;
+        padding: 12px 32px;
+        font-size: 14px;
+    }
+
+    /* Video wrapper */
+    .video-wrapper {
+        padding: 12px;
+        border-radius: 16px;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .second-page .row1 .col2 video {
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .video-wrapper {
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(14px);
+    }
+}
+
+
+
+
+
+/* Advantage Starts From Here */
+.advantage {
+    position: relative;
+    padding: 100px 0;
+    background: #fdfaf7;
+    overflow: hidden;
+}
+
+/* Background Shapes */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+.circle-1 { width: 300px; height: 300px; background: rgba(89, 3, 3, 0.05); top: -5%; right: -5%; }
+.circle-2 { width: 400px; height: 400px; background: rgba(181, 142, 62, 0.05); bottom: -10%; left: -5%; }
+
+/* Typography */
+.text-outline {
+    -webkit-text-stroke: 1px #590303;
+    color: transparent;
+}
+.badge-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #590303;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* The Glass Cards Layout */
+.triad-cards { display: grid; gap: 20px; position: relative; }
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: 0.4s;
+}
+
+.triad-2 { margin-left: 50px; background: #fff; border: 1px solid #eee; z-index: 2; }
+
+.glass-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 40px rgba(89, 3, 3, 0.1); }
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: #590303;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.card-body a{
+    color:rgb(33 37 41);
+    text-decoration:none;
+}
+/* Video Container ko ek decorative frame banaya hai */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px; 
+    margin: 20px auto;
+    padding: 15px;
+    z-index: 1;
+}
+
+/* Video ke peeche ek stylized background block */
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    border: 2px solid #b58e3e; /* Golden Border */
+    border-radius: 30px;
+    z-index: -1;
+    transform: rotate(-5deg); /* Thoda tida look */
+    transition: 0.5s ease;
+}
+
+/* Video Styling */
+.school-video {
+    width: 100%;
+    aspect-ratio: 9 / 16; /* Perfect Vertical Ratio */
+    object-fit: cover;
+    border-radius: 25px;
+    border: 5px solid #fff; /* White inner frame */
+    box-shadow: 0 20px 50px rgba(89, 3, 3, 0.2); /* Deep shadow */
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect: Jab koi mouse le jaye toh frame aur video move karein */
+.video-container:hover .school-video {
+    transform: scale(1.03) rotate(2deg);
+}
+
+.video-container:hover::before {
+    transform: rotate(0deg) scale(1.05);
+    border-color: #590303; /* Color change on hover */
+}
+
+/* Chota decorative element: Top Right corner par */
+.video-container::after {
+    content: '★';
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 2rem;
+    color: #b58e3e;
+    text-shadow: 0 0 10px rgba(181, 142, 62, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 576px) {
+    .video-container {
+        max-width: 280px; /* Mobile pe thoda chota */
+    }
+}
+
+/* Floating Badge */
+.floating-experience {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    background: #b58e3e;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(181, 142, 62, 0.4);
+    z-index: 10;
+}
+
+.floating-experience .number { font-size: 2rem; font-weight: 900; display: block; }
+.floating-experience .txt { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+
+/* Custom Swiper Controls */
+.nav-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+}
+
+.custom-arrow { 
+    color: white !important; 
+    position: static !important; 
+    margin: 0 !important;
+}
+.custom-arrow::after { font-size: 1rem !important; font-weight: 900; }
+.swiper-pagination { position: static !important; }
+
+
+/* TABLET VIEW */
+@media (max-width: 991px) {
+
+    .advantage {
+        padding: 80px 0;
+    }
+
+    .advantage-header {
+        text-align: center;
+    }
+
+    .advantage-header h2 {
+        font-size: 5.5vw;
+    }
+
+    .advantage-header .lead {
+        font-size: 16px;
+    }
+
+    .badge-pill {
+        margin: 0 auto 15px;
+        display: inline-block;
+    }
+
+    .triad-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .glass-card {
+        padding: 22px;
+        text-align: center;
+    }
+
+    .glass-card h5 {
+        font-size: 16px;
+    }
+
+    .glass-card p {
+        font-size: 14px;
+    }
+
+    .creative-gallery-frame {
+        margin-bottom: 50px;
+    }
+
+    .floating-experience {
+        transform: scale(0.85);
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+
+/* MOBILE VIEW */
+@media (max-width: 576px) {
+
+    /* Section padding */
+    .advantage {
+        padding: 70px 0 90px;
+    }
+
+    /* Background shapes subtle */
+    .bg-shape {
+        opacity: 0.25;
+        filter: blur(40px);
+    }
+
+    /* Header */
+    .advantage-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .advantage-header h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .advantage-header .lead {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Badge */
+    .badge-pill {
+        font-size: 11px;
+        padding: 6px 16px;
+    }
+
+    /* Triad cards stack */
+    .triad-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .glass-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        border-radius: 18px;
+    }
+
+    .glass-card .card-icon {
+        color:#590303;
+        font-size: 22px;
+        min-width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.15);
+    }
+
+    .glass-card h5 {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .glass-card p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+
+    /* Floating badge */
+    .floating-experience {
+        padding: 12px 16px;
+        border-radius: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .floating-experience .number {
+        font-size: 20px;
+    }
+
+    .floating-experience .txt {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+}
+/* Advantage Ends From Here */
+
+/* Alumini Section Starts Here */
+/* 25 Years Celebration & Alumni Transition Section */
+.alumni-invite {
+    padding: 100px 0;
+    background: #ffffff; /* Ekdum saaf white background */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Photo Section */
+.celebration-box {
+    position: relative;
+    text-align: center;
+}
+
+.celebration-box img {
+    max-width: 80%; /* Logo size control */
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(181, 142, 62, 0.3)); /* Golden Glow */
+    transition: transform 0.5s ease;
+}
+
+.celebration-box:hover img {
+    transform: scale(1.05); /* Subtle zoom */
+}
+
+/* Content Section */
+.alumni-content {
+    padding-left: 40px;
+}
+
+.alumni-content h6 {
+    color: #b58e3e; /* Golden */
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.alumni-content h2 {
+    color: #590303; /* Dark Red */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.alumni-content p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+/* Elegant Button */
+.btn-alumni-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 35px;
+    background: #590303;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    box-shadow: 0 10px 20px rgba(89, 3, 3, 0.2);
+}
+
+.btn-alumni-link i {
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.btn-alumni-link:hover {
+    background: #b58e3e; /* Gold on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(181, 142, 62, 0.3);
+}
+
+.btn-alumni-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .alumni-content { padding-left: 0; text-align: center; margin-top: 50px; }
+    .alumni-content p { margin-left: auto; margin-right: auto; }
+}
+/* Alumini Section Starts Here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* POP FLOATING CARD */
+.campus-popup {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10000;
+    width: 420px;
+    background: rgba(15, 15, 15, 0.85); /* Dark Sleek Look */
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 20px;
+    border: 1px solid rgba(181, 142, 62, 0.3); /* Gold Border */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4), inset 0 0 15px rgba(181, 142, 62, 0.1);
+}
+
+.popup-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.popup-logo-container {
+    width: 85px;
+    height: 85px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+
+.popup-logo-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.popup-text .badge {
+    background: #590303;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.popup-text h5 {
+    color: #b58e3e; /* Gold color */
+    font-size: 1.1rem;
+    margin: 8px 0 5px 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.popup-text p {
+    color: #ccc;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.btn-know {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-know:hover {
+    color: #b58e3e;
+    gap: 12px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-close:hover { color: #fff; }
+
+/* Mobile optimization */
+@media (max-width: 500px) {
+    .campus-popup { width: 90%; left: 5%; bottom: 20px; }
+}
+/* POP FLOATING CARD */
