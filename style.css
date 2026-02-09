@@ -979,16 +979,279 @@ body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow
 /* Alumini Section Starts Here */
 
 
+/* Discipline Section Starts Here */
+/* Importing High-End Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Outfit:wght@300;400;600&display=swap');
 
+:root {
+    --bg-black: #0a0a0a;
+    --accent-glow: #3b82f6; /* Electric Blue */
+    --card-surface: #121212;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
 
+.coc-section {
+    background-color: var(--bg-black);
+    color: var(--text-primary);
+    padding: 100px 5%;
+    font-family: 'Outfit', sans-serif;
+}
 
+/* INNOVATIVE FLOATING HEADING */
+.header-wrap {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    border-left: 2px solid var(--accent-glow);
+    padding-left: 30px;
+}
 
+.header-wrap h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin: 0;
+    letter-spacing: -2px;
+}
 
+.header-wrap h2 span {
+    color: var(--accent-glow);
+    display: block;
+}
 
+/* GRID WITH GLASS-STROKE EFFECT */
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.rule-card {
+    background: var(--card-surface);
+    padding: 40px;
+    border-radius: 2px; /* Slight rounded edges for a sharp look */
+    border: 1px solid #222;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
 
+.rule-card:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
 
+.rule-card .number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-glow);
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0.6;
+}
 
+.rule-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.rule-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 1.05rem;
+}
+
+/* Subtle Hover Animation for Text */
+.rule-card:hover p {
+    color: var(--text-primary);
+}
+
+/* --- Mobile Optimization (Responsive Design) --- */
+
+@media (max-width: 768px) {
+    .coc-section {
+        padding: 60px 20px; /* Mobile par padding kam takki space bache */
+    }
+
+    .header-wrap {
+        padding-left: 15px;
+        margin-bottom: 50px;
+    }
+
+    .header-wrap h2 {
+        font-size: 2.8rem; /* Mobile screen ke hisaab se heading size */
+        letter-spacing: -1px;
+    }
+
+    .rules-grid {
+        grid-template-columns: 1fr; /* Mobile par cards ek ke niche ek aayenge */
+        gap: 15px;
+    }
+
+    .rule-card {
+        padding: 30px 20px; /* Card ki internal padding kam kar di */
+    }
+
+    .rule-card h3 {
+        font-size: 1.5rem; /* Sub-heading thodi chhoti */
+    }
+
+    .rule-card p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Mobile par hover effect ki jagah tap feel dene ke liye active state */
+    .rule-card:active {
+        transform: scale(0.98);
+        border-color: var(--accent-glow);
+    }
+}
+
+/* Extra small devices ke liye (Chhote phones) */
+@media (max-width: 480px) {
+    .header-wrap h2 {
+        font-size: 2.2rem;
+    }
+    
+    .header-wrap p {
+        font-size: 1rem;
+    }
+}
+/* Discipline Section Ends Here */
+
+/* Academics Start */
+/* Premium Typography */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --tree-glow: #00d2ff;
+    --tree-purple: #9d50bb;
+    --card-bg: #111118; /* Solid background to stop flickering */
+}
+
+.academic-tree-section {
+    background-color: #08080c;
+    padding: 100px 10%;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    position: relative;
+}
+
+.tree-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+/* THE TREE TRUNK - Moved slightly right to avoid social icons clash */
+.tree-container {
+    position: relative;
+    padding-left: 50px;
+    border-left: 2px solid rgba(0, 210, 255, 0.2);
+    margin-left: 20px;
+}
+
+.tree-branch {
+    position: relative;
+    margin-bottom: 80px;
+    transition: 0.3s ease;
+}
+
+/* The Glowing Joint (Dot) */
+.tree-branch::before {
+    content: '';
+    position: absolute;
+    left: -59px; /* Connects exactly to the left border line */
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    background: var(--tree-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--tree-glow);
+    z-index: 2;
+}
+
+/* Horizontal Connector Line */
+.tree-branch::after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 37px;
+    width: 50px;
+    height: 2px;
+    background: rgba(0, 210, 255, 0.2);
+}
+
+.branch-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    /* Glitch preventer: removed transform on hover */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.branch-card:hover {
+    border-color: var(--tree-glow);
+    box-shadow: 0 20px 40px rgba(0, 210, 255, 0.1);
+}
+
+.branch-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    color: var(--tree-glow);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.branch-subtitle {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.branch-list {
+    list-style: none;
+    padding: 0;
+}
+
+.branch-list li {
+    margin-bottom: 12px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+}
+
+.branch-list li::before {
+    content: '→';
+    color: var(--tree-purple);
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .tree-container { margin-left: 10px; padding-left: 30px; }
+    .tree-branch::before { left: -39px; }
+    .tree-branch::after { left: -30px; width: 30px; }
+}
+/* Academics End */
 
 
 
