@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code of Conduct | Royal Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --royal-maroon: #590303;
+            --gold: #ffd700;
+            --maroon-glass: rgba(89, 3, 3, 0.3);
+            --bg-black: #050505;
+            --text-muted: #d1d1d1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-black);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* --- SECTION STYLES --- */
+        .coc-section {
+            padding: 100px 5%;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header-wrap {
+            border-left: 4px solid var(--gold);
+            padding-left: 25px;
+            margin-bottom: 80px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-wrap h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .header-wrap h2 span { color: var(--gold); }
+
+        .header-desc {
+            margin-top: 15px;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        /* --- THE RULES GRID --- */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            perspective: 1500px; /* Depth for 3D */
+        }
+
+        /* --- 3D INTERACTIVE CARDS --- */
+        .rule-card {
+            background: var(--maroon-glass);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 45px 40px;
+            position: relative;
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.1s ease-out, box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+            cursor: default;
+        }
+
+        .rule-card:hover {
+            border-color: var(--gold);
+            background: var(--royal-maroon);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number/Index Style */
+        .rule-index {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-weight: 800;
+            margin-bottom: 20px;
+            transform: translateZ(40px);
+        }
+
+        /* Title Depth */
+        .rule-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 700;
+            transform: translateZ(60px);
+        }
+
+        /* Description Depth */
+        .rule-desc {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            font-weight: 300;
+            transform: translateZ(30px);
+        }
+
+        /* Hover Glow Effect */
+        .rule-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: radial-gradient(circle at center, rgba(255,215,0,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .rule-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .coc-section { padding: 60px 20px; }
+            .header-wrap h2 { font-size: 2.8rem; }
+            .rules-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="coc-section">
+        <div class="header-wrap">
+            <h2>Our Code <span>Of Conduct</span></h2>
+            <p class="header-desc">Setting the foundation for discipline, integrity, and mutual respect within our community.</p>
+        </div>
+
+        <div class="rules-grid">
+            <div class="rule-card">
+                <span class="rule-index">/01</span>
+                <h3 class="rule-title">Punctuality</h3>
+                <p class="rule-desc">Time is our most valuable resource. We maintain strict adherence to schedules to foster a culture of readiness and respect.</p>
+            </div>
+
+            <div class="rule-card">
+                <span class="rule-index">/02</span>
+                <h3 class="rule-title">Digital Ethics</h3>
+                <p class="rule-desc">Technology is a tool for empowerment. We ensure all digital interactions are purposeful, safe, and ethically grounded.</p>
+            </div>
+
+            <div class="rule-card">
+                <span class="rule-index">/03</span>
+                <h3 class="rule-title">Mutual Respect</h3>
+                <p class="rule-desc">Every individual is a pillar of our institution. We uphold a zero-tolerance policy for bullying or exclusion in any form.</p>
+            </div>
+
+            <div class="rule-card">
+                <span class="rule-index">/04</span>
+                <h3 class="rule-title">Integrity</h3>
+                <p class="rule-desc">Honesty in academics and character is non-negotiable. We take pride in our work and responsibility for our actions.</p>
+            </div>
+
+            <div class="rule-card">
+                <span class="rule-index">/05</span>
+                <h3 class="rule-title">Campus Pride</h3>
+                <p class="rule-desc">We treat our campus and resources with the utmost care, reflecting our collective commitment to excellence.</p>
+            </div>
+
+            <div class="rule-card">
+                <span class="rule-index">/06</span>
+                <h3 class="rule-title">Global Citizenship</h3>
+                <p class="rule-desc">We prepare students to be compassionate leaders who contribute positively to the local and global community.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cards = document.querySelectorAll('.rule-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+
+                // Intensity: 25 degrees tilt
+                const tiltX = (y - 0.5) * -25;
+                const tiltY = (x - 0.5) * 25;
+
+                card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.05, 1.05, 1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
+        });
+    </script>
+
+</body>
+</html>

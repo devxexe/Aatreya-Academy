@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Roadmap | Royal Academy</title>
+    
+    <!--WEB-ICON-->
+    <link rel="icon" type="images/x-icon" href="images/web-logo.png">
+    <!--WEB-ICON-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --royal-maroon: #590303;
+            --gold: #ffd700;
+            --maroon-glass: rgba(89, 3, 3, 0.3);
+            --bg-black: #050505;
+            --text-muted: #d1d1d1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-black);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* --- SECTION STYLES --- */
+        .academic-tree-section {
+            padding: 100px 5%;
+            overflow: hidden;
+        }
+
+        .header-wrap {
+            border-left: 4px solid var(--gold);
+            padding-left: 25px;
+            margin-bottom: 80px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-wrap h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .header-wrap h2 span { color: var(--gold); }
+
+        .header-desc {
+            margin-top: 15px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- THE VERTICAL TREE LINE --- */
+        .tree-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 60px;
+            border-left: 2px solid rgba(255, 215, 0, 0.1);
+        }
+
+        /* Glowing Line Glow */
+        .tree-container::after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+            opacity: 0.4;
+        }
+
+        .tree-branch {
+            position: relative;
+            margin-bottom: 80px;
+            perspective: 1500px; /* 3D depth */
+        }
+
+        /* The Gold Junction Dot */
+        .tree-branch::before {
+            content: '';
+            position: absolute;
+            left: -69px;
+            top: 35px;
+            width: 18px;
+            height: 18px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--gold);
+            z-index: 5;
+        }
+
+        /* --- 3D INTERACTIVE CARDS --- */
+        .branch-card {
+            background: var(--maroon-glass);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.1s ease-out, box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+        }
+
+        .branch-card:hover {
+            border-color: var(--gold);
+            background: var(--royal-maroon);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Layered Depth for Content */
+        .branch-subtitle {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            transform: translateZ(30px);
+        }
+
+        .branch-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            transform: translateZ(60px);
+        }
+
+        .branch-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            transform: translateZ(40px);
+        }
+
+        .branch-list li {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .branch-list li::before {
+            content: '◈';
+            color: var(--gold);
+            margin-right: 15px;
+        }
+
+        /* Background Ghost Numbers */
+        .branch-card::after {
+            content: attr(data-step);
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 6rem;
+            font-weight: 900;
+            font-family: 'Space Grotesk', sans-serif;
+            color: rgba(255, 215, 0, 0.03);
+            pointer-events: none;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .tree-container { padding-left: 40px; }
+            .tree-branch::before { left: -49px; width: 14px; height: 14px; }
+            .branch-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="academic-tree-section">
+        <div class="header-wrap">
+            <h2>Academic <span>Roadmap</span></h2>
+            <p class="header-desc">The progressive path of learning from Nursery to Senior Secondary.</p>
+        </div>
+
+        <div class="tree-container">
+            <div class="tree-branch">
+                <div class="branch-card" data-step="01">
+                    <span class="branch-subtitle">Foundation Stage</span>
+                    <h3 class="branch-title">Nursery - Class II</h3>
+                    <ul class="branch-list">
+                        <li>Activity-Based Learning</li>
+                        <li>Motor & Cognitive Skills</li>
+                        <li>Phonetic foundations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tree-branch">
+                <div class="branch-card" data-step="02">
+                    <span class="branch-subtitle">Preparatory Stage</span>
+                    <h3 class="branch-title">Class III - V</h3>
+                    <ul class="branch-list">
+                        <li>Mathematical Logic</li>
+                        <li>Conceptual Literacy</li>
+                        <li>Environmental Studies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tree-branch">
+                <div class="branch-card" data-step="03">
+                    <span class="branch-subtitle">Middle Stage</span>
+                    <h3 class="branch-title">Class VI - VIII</h3>
+                    <ul class="branch-list">
+                        <li>Scientific Lab Inquiry</li>
+                        <li>Coding & Digital Skills</li>
+                        <li>Project-Based Learning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tree-branch">
+                <div class="branch-card" data-step="04">
+                    <span class="branch-subtitle">Secondary Stage</span>
+                    <h3 class="branch-title">Class IX - X</h3>
+                    <ul class="branch-list">
+                        <li>Academic Specialization</li>
+                        <li>Board Exam Readiness</li>
+                        <li>Analytical Research</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tree-branch">
+                <div class="branch-card" data-step="05">
+                    <span class="branch-subtitle">Senior Secondary</span>
+                    <h3 class="branch-title">Class XI - XII</h3>
+                    <ul class="branch-list">
+                        <li>Sci / Comm / Arts Streams</li>
+                        <li>Competitive Exam Prep</li>
+                        <li>Leadership Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cards = document.querySelectorAll('.branch-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+
+                // Intensity control (higher = less tilt)
+                const tiltX = (y - 0.5) * -25;
+                const tiltY = (x - 0.5) * 25;
+
+                card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.05, 1.05, 1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
+        });
+    </script>
+
+</body>
+</html>
