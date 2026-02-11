@@ -321,12 +321,6 @@ body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow
 }
 
 
-
-
-
-
-
-
 /* Second Page Starts From Here */
 .second-page {
     padding: 10vw 8vw;
@@ -1286,188 +1280,131 @@ body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow
 /* Academics End */
 
 /* Footer Start */
-/* --- ROYAL LIGHT MODE FOOTER --- */
-
-.royal-light-footer {
-    background-color: #fcfcfc; /* Premium Off-White */
-    position: relative;
-    padding-top: 120px;
-    color: #333;
-    font-family: 'Outfit', sans-serif;
+.modern-island-footer {
+    background: #0a0a0a; /* Deep Dark Background */
+    padding: 60px 20px 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
-/* Maroon Curve on Top */
-.light-footer-curve {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.light-footer-curve svg {
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
-}
-
-.light-footer-curve .shape-fill {
-    fill: #590303; /* Deep Maroon */
-}
-
-.footer-container {
-    max-width: 1200px;
+.island-container {
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 5%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 40px;
+    padding: 60px;
 }
 
-.footer-main-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 1fr;
-    gap: 50px;
-    padding-bottom: 50px;
-}
-
-/* Branding Section */
-.footer-logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #590303; /* Maroon */
-    margin-bottom: 15px;
-}
-
-.footer-logo span { 
-    color: #b8860b; /* Deep Gold for readability on light */
-}
-
-.footer-tagline {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 25px;
-}
-
-.light-badge {
-    display: inline-block;
-    padding: 6px 16px;
-    background: rgba(89, 3, 3, 0.05);
-    border: 1px solid #590303;
-    color: #590303;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
-
-/* Links Section */
-.footer-links-hub {
+/* Typography & Layout */
+.footer-top-row {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-.link-group h4, .footer-social-pulse h4 {
-    color: #590303;
-    font-family: 'Space Grotesk', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 25px;
+.giant-logo {
+    font-size: 3.5rem;
     font-weight: 800;
+    margin: 0;
+    letter-spacing: -2px;
 }
+.giant-logo span { color: #ffd700; }
 
-.link-group ul {
-    list-style: none;
-    padding: 0;
-}
-
-.link-group ul li { margin-bottom: 12px; }
-
-.link-group ul li a {
-    color: #555;
+.cta-label { display: block; color: #888; margin-bottom: 10px; font-size: 0.9rem; }
+.minimal-btn {
+    padding: 15px 35px;
+    background: #590303;
+    color: white;
     text-decoration: none;
-    transition: 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.link-group ul li a:hover {
-    color: #b8860b; /* Gold Hover */
-    padding-left: 5px;
-}
-
-/* Light Social Buttons */
-.pulse-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.pulse-btn-light {
-    display: flex;
-    align-items: center;
-    padding: 12px 18px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #333;
+    border-radius: 50px;
     font-weight: 600;
-    background: #fff;
-    border: 1px solid #eee;
     transition: 0.4s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: inline-block;
+}
+.minimal-btn:hover { background: #fff; color: #590303; transform: scale(1.05); }
+
+/* Middle Section */
+.footer-mid-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
 }
 
-.pulse-btn-light.wa:hover {
-    background: #25D366;
-    color: #fff;
-    border-color: #25D366;
-    transform: translateY(-3px);
+.contact-big {
+    display: flex;
+    gap: 60px;
 }
-
-.pulse-btn-light.ig:hover {
-    background: linear-gradient(45deg, #f09433, #bc1888);
-    color: #fff;
-    border-color: transparent;
-    transform: translateY(-3px);
+.info-item label { display: block; color: #ffd700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+.info-item a, .info-item p { 
+    font-size: 1.2rem; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 500;
+    transition: 0.3s;
 }
+.info-item a:hover { color: #ffd700; }
 
-.pulse-btn-light .icon {
-    margin-right: 12px;
-    font-size: 0.8rem;
-    font-weight: 800;
-}
+.minimal-nav { display: flex; gap: 50px; }
+.nav-col a { display: block; color: #888; text-decoration: none; margin-bottom: 12px; transition: 0.3s; }
+.nav-col a:hover { color: #fff; padding-left: 5px; }
 
-/* Bottom Bar */
-.footer-bottom-light {
-    padding: 40px 0;
-}
-
-.gold-divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #b8860b, transparent);
-    margin-bottom: 30px;
-    opacity: 0.2;
-}
-
-.copy-flex {
+/* Bottom Row & Credit Badge */
+.footer-bottom-row {
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #888;
-    font-size: 0.85rem;
 }
 
-.legal-links a {
-    color: #888;
+.legal { color: #555; font-size: 0.85rem; }
+.legal a { color: #555; margin-left: 20px; text-decoration: none; }
+
+/* Shiny Credit Badge */
+.shiny-badge {
     text-decoration: none;
-    margin-left: 20px;
+    display: block;
 }
+.badge-inner {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.badge-inner i { color: #0077b5; font-size: 1.2rem; }
+.badge-inner:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-5px);
+}
+.badge-inner::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: rotate(45deg);
+    transition: 0.8s;
+}
+.badge-inner:hover::after { left: 100%; }
 
-.legal-links a:hover { color: #590303; }
-
-/* Responsive */
-@media (max-width: 900px) {
-    .footer-main-grid { grid-template-columns: 1fr; gap: 40px; }
-    .footer-links-hub { flex-direction: column; gap: 30px; }
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .footer-top-row, .footer-mid-row, .footer-bottom-row { flex-direction: column; align-items: flex-start; gap: 30px; }
+    .contact-big { flex-direction: column; gap: 30px; }
+    .giant-logo { font-size: 2.5rem; }
+    .island-container { padding: 30px; border-radius: 20px; }
 }
 /* Footer End */
 
@@ -1530,6 +1467,58 @@ body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow
 
 
 
+/* FLOATING FORM STARTS HERE */
+/* Pop-up Overlay Updated for Smoothness */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    
+    /* Smooth Transition Logic */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease-in-out; 
+}
+
+/* Jab popup active ho */
+.popup-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    transform: translateY(20px);
+    transition: transform 0.6s ease-out;
+}
+
+/* Content bhi thoda upar move karega smoothly */
+.popup-overlay.show .popup-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+/* FLOATING FORM ENDS HERE */
 
 
 
@@ -1548,7 +1537,7 @@ body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow
 
 
 
-/* POP FLOATING CARD */
+/* POP FLOATING CARD STARTS HERE*/
 .campus-popup {
     position: fixed;
     bottom: 40px;
@@ -1646,4 +1635,4 @@ body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow
 @media (max-width: 500px) {
     .campus-popup { width: 90%; left: 5%; bottom: 20px; }
 }
-/* POP FLOATING CARD */
+/* POP FLOATING CARD ENDS HERE*/
